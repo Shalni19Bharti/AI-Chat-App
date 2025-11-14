@@ -14,7 +14,6 @@ A responsive AI chat application built with React, TypeScript, and Tailwind CSS 
 - [Data Persistence](#data-persistence)
 - [Design Decisions](#design-decisions)
 - [Building for Production](#building-for-production)
-- [Troubleshooting](#troubleshooting)
 
 ## Features
 
@@ -91,17 +90,17 @@ src/
 │   │   ├── MessageList.tsx     # Message display container
 │   │   ├── MessageItem.tsx     # Individual message component
 │   │   └── MessageInput.tsx    # Message input with keyboard shortcuts
+        └── DeleteModal.tsx     # Delete confirmation
 │   ├── Sidebar/
 │   │   ├── Sidebar.tsx         # Session list sidebar
-│   │   └── SessionItem.tsx     # Individual session item
-│   └── common/
-│       ├── LoadingIndicator.tsx # Typing indicator
-│       └── DeleteConfirmationModal.tsx # Delete confirmation
+│   │   └── ChatItem.tsx     # Individual session item
+│   └── Indicator/
+│       ├── TypingIndicator.tsx # Typing indicator
 ├── hooks/
 │   ├── useLocalStorage.ts      # Custom localStorage hook
-│   └── useChatSessions.ts      # Chat session management
+│   └── useChat.ts      # Chat session management
 ├── services/
-│   └── geminiApi.ts            # Gemini API integration
+│   └── chatServices.ts            # Gemini API integration
 ├── types/
 │   └── index.ts                # TypeScript type definitions
 ├── utils/
